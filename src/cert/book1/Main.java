@@ -1,12 +1,5 @@
 package cert.book1;
-
-import cert.book1.assesment.Assesment;
-import cert.book1.chapter2.Ch2;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Period;
+import cert.book1.chapter3.Ch3;
 
 public class Main {
     String str;
@@ -27,9 +20,9 @@ public class Main {
 
     public static void main(String[] args) {
         // Assessment Test
-
         System.out.println("Start of assessment test");
-                /*Assesment.assesmemt();*/
+
+        /*Assesment.assesmemt();*/
 
 
         // chapter 1
@@ -39,15 +32,24 @@ public class Main {
 
         /*Ch1.start();*/
 
+
         // chapter 2
         System.out.println("Start of chapter 2");
 
 
-//        Ch2.labels();
-        /*Ch2.start();*/
+        /* Ch2.labels();
+        Ch2.start();*/
+
 
         // chapter 3
         System.out.println("Start of chapter 3");
-        }
+
+        /*Ch3.start();
+        Ch3.labels();*/
+        /*Ch3.timeApi();*/
+        Ch3.oldTimeApi();
+
+        "".substring(0,0);
+    }
 
 }
