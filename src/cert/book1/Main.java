@@ -1,5 +1,7 @@
 package cert.book1;
-import cert.book1.chapter3.Ch3;
+import cert.book1.chapter4.Bear;
+import cert.book1.chapter4.Ch4;
+import cert.book1.chapter4.Panda;
 
 public class Main {
     String str;
@@ -47,9 +49,17 @@ public class Main {
         /*Ch3.start();
         Ch3.labels();*/
         /*Ch3.timeApi();*/
-        Ch3.oldTimeApi();
+        /*Ch3.oldTimeApi();*/
 
-        "".substring(0,0);
+        /*"".substring(0,0);*/
+
+
+        // chapter 4
+        System.out.println("Start of chapter 4");
+
+        Ch4.start();
+
+
     }
 
 }

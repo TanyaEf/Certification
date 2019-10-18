@@ -50,7 +50,7 @@ public class  Ch3 {
 
         System.out.println(strings);*/
 
-        Collections.sort(new LinkedList<>());
+        /*Collections.sort(new LinkedList<>());*/
 
         Period.ofYears(1).ofWeeks(3);
         LocalDate.of(0,0,0);
