@@ -6,6 +6,9 @@ import static cert.book1.chapter4.rope.Rope.*;
 
 import cert.book1.chapter4.school.ClassRoom;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Ch4 {
 
     static int i;
@@ -69,10 +72,14 @@ public class Ch4 {
         rope2.swing();*/
 
         Test test = new Test();
-        short s = 123;
+/*        short s = 123;
         test.print(s);
         test.print(true);
-        test.print(6.789);
+        test.print(6.789);*/
+
+        int x = 9;
+        long square = square(x);
+        System.out.println(x);
 
     }
 
@@ -110,5 +117,17 @@ public class Ch4 {
       }*/
     private static void play(Object i) {
         System.out.println("Object");
+    }
+
+    private static long square(int x) {
+        long y = x * /*(long)*/x;
+        x = -1;
+        return y;
+    }
+
+    private static void lamblsDemo() {
+        List<String> list = new ArrayList<>();
+        list.removeIf((String s)-> s.isEmpty());
+        list.removeIf(String::isEmpty);
     }
 }
