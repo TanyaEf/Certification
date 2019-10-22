@@ -1,13 +1,19 @@
 package cert.book1.chapter5;
 
-import java.io.IOException;
+public class Snake extends Reptile {
 
-public class Snake extends Reptilie {
+    public static int count = 0;
+    public int i = 0;
+
     protected boolean hasLegs() {
         return false;
     }
 
     protected double getWeight() throws InsufficientDataException{
         return 2;
+    }
+
+    public static void test() {
+        count++;
     }
 }

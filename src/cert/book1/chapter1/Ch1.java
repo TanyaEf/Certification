@@ -34,5 +34,8 @@ public class Ch1 {
         double d3= 0xE;
         float fl= 3123456789f;
         float f2= 3123456789.0f;
+
+        Integer.parseInt("2");
+        Integer integer = Integer.valueOf("2");
     }
 }
