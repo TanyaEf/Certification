@@ -52,9 +52,11 @@ public class  Ch3 {
 
         /*Collections.sort(new LinkedList<>());*/
 
-        Period.ofYears(1).ofWeeks(3);
+/*        Period.ofYears(1).ofWeeks(3);
         LocalDate.of(0,0,0);
-        LocalDateTime localDateTime = LocalDateTime.of(LocalDate.MAX, LocalTime.MAX);
+        LocalDateTime localDateTime = LocalDateTime.of(LocalDate.MAX, LocalTime.MAX);*/
+
+        test();
     }
 
     public static void timeApi() {
@@ -152,5 +154,14 @@ public class  Ch3 {
         // format pattern
         SimpleDateFormat  dateFormat = new SimpleDateFormat("hh:mm");
         System.out.println(dateFormat.format(date1));
+    }
+
+    public static void test() {
+        LocalDateTime dateTime = LocalDateTime.of(2015, 5, 10, 11, 22, 33);
+        Period p  = Period.of(1, 2, 3);
+        dateTime = dateTime.minus(p);
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
+        System.out.println(dateTime.format(dateTimeFormatter));
     }
 }

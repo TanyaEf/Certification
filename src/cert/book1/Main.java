@@ -1,7 +1,8 @@
 package cert.book1;
-import cert.book1.chapter4.Bear;
+
+import cert.book1.Chapter6.Ch6;
+import cert.book1.chapter3.Ch3;
 import cert.book1.chapter4.Ch4;
-import cert.book1.chapter4.Panda;
 import cert.book1.chapter5.Ch5;
 
 public class Main {
@@ -47,8 +48,8 @@ public class Main {
         // chapter 3
         System.out.println("Start of chapter 3");
 
-        /*Ch3.start();
-        Ch3.labels();*/
+        Ch3.start();
+        /*Ch3.labels();*/
         /*Ch3.timeApi();*/
         /*Ch3.oldTimeApi();*/
 
@@ -66,7 +67,23 @@ public class Main {
 
         Ch5.start();
 
+/*        System.out.println(0f / 0f);  //Nan
+        System.out.println(1f / 0f); // Infinity
+        System.out.println(-1f / 0f); // - Infinity
 
+        System.out.println(0d / 0d);
+        System.out.println(1d / 0d);
+        System.out.println(-1d / 0d);*/
+
+        // chapter 6
+        System.out.println("Start of chapter 6");
+
+
+        /*        try {
+            Ch6.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
     }
 
 }

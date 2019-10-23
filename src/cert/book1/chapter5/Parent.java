@@ -16,7 +16,7 @@ public class Parent {
         System.out.println("From Parent");
     }*/
 
-    public void  fly() {
+    public  void  fly() {
         return ;
     }
 
