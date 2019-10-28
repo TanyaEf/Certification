@@ -24,12 +24,14 @@ public class  Ch3 {
 /*        String str1 = "hello world";
         System.out.println(str1.substring(3,2));*/
 
+/*
         char a = 'a';
         String b = "";
         for (int j = 0; j < 3; j++) {
             b += b + a;
             System.out.println(b);
         }
+*/
 
 
 /*        String s = new String();
@@ -56,7 +58,9 @@ public class  Ch3 {
         LocalDate.of(0,0,0);
         LocalDateTime localDateTime = LocalDateTime.of(LocalDate.MAX, LocalTime.MAX);*/
 
-        test();
+        /*test();*/
+
+        arrayToList();
     }
 
     public static void timeApi() {
@@ -163,5 +167,38 @@ public class  Ch3 {
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
         System.out.println(dateTime.format(dateTimeFormatter));
+    }
+
+    private static void arrayToList() {
+        Integer[] arr = new Integer[]{5, 9, 4, 3, 1};
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        List<Integer> list = Arrays.asList(arr);
+        list.set(0, 20);
+
+        System.out.println(list);
+
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    private static void listToArray() {
+        List<Integer> list = Arrays.asList(5, 9, 4, 3, 1);
+        System.out.println(list);
+
+        Integer[] array = list.toArray(new Integer[list.size()]);
+        for (Integer integer : array) {
+            System.out.print(integer);
+        }
+
+        array[1] = 20;
+        for (Integer integer : array) {
+            System.out.print(integer);
+        }
+        System.out.println(list);
     }
 }

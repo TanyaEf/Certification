@@ -26,8 +26,8 @@ public class Main {
 
     public static void main(String[] args) {
         runBook1();
-        runBook2();
-
+        /*runBook2();
+*/
 
     }
 
@@ -70,7 +70,7 @@ public class Main {
 
         // chapter 5
         System.out.println("Start of chapter 5 book 1");
-        Ch5.start();
+        /*Ch5.start();*/
 
 /*        System.out.println(0f / 0f);  //Nan
         System.out.println(1f / 0f); // Infinity
