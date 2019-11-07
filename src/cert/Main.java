@@ -1,6 +1,7 @@
 package cert;
 
 import cert.book1.Chapter6.Ch6;
+import cert.book1.bonus.BonusExam1;
 import cert.book1.chapter3.Ch3;
 import cert.book1.chapter4.Ch4;
 import cert.book1.chapter5.Ch5;
@@ -26,8 +27,7 @@ public class Main {
 
     public static void main(String[] args) {
         runBook1();
-        /*runBook2();
-*/
+        /*runBook2();*/
 
     }
 
@@ -87,6 +87,11 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }*/
+
+        // bonus exam
+        System.out.println("Start of bonus exam 1");
+
+        BonusExam1.start();
     }
 
 }

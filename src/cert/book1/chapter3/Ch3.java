@@ -184,6 +184,15 @@ public class  Ch3 {
             System.out.print(i + " ");
         }
         System.out.println();
+
+        arr[1] = 30;
+
+        System.out.println(list);
+
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
 
     private static void listToArray() {
