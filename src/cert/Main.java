@@ -1,12 +1,6 @@
 package cert;
 
-import cert.book1.Chapter6.Ch6;
-import cert.book1.bonus.BonusExam1;
-import cert.book1.chapter3.Ch3;
-import cert.book1.chapter4.Ch4;
-import cert.book1.chapter5.Ch5;
-import cert.book1.chapter5.Mammal;
-import cert.book1.chapter5.Parent;
+import cert.book2.chapter3.Ch3;
 
 public class Main {
     String str;
@@ -26,8 +20,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        runBook1();
-        /*runBook2();*/
+        /*runBook1();*/
+
+        runBook2();
 
     }
 
@@ -35,9 +30,12 @@ public class Main {
         // chapter 1 book 2
         System.out.println("Start of chapter 1 book 2");
 
-        Parent parent = new Parent();
-        Class<Mammal> mammalClass = Mammal.class;
-        System.out.println(Mammal.class.isAssignableFrom(parent.getClass()));
+        /*Ch1.start();*/
+
+        // chapter 3 book 2
+        System.out.println("Start of chapter 3 book 2");
+
+        Ch3.start();
 
     }
 
@@ -58,7 +56,7 @@ public class Main {
 
         // chapter 3
         System.out.println("Start of chapter 3 book 1");
-        Ch3.start();
+      /*  Ch3.start();*/
         /*Ch3.labels();*/
         /*Ch3.timeApi();*/
         /*Ch3.oldTimeApi();*/
@@ -91,7 +89,7 @@ public class Main {
         // bonus exam
         System.out.println("Start of bonus exam 1");
 
-        BonusExam1.start();
+/*        BonusExam1.start();*/
     }
 
 }
