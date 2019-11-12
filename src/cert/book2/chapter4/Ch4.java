@@ -37,6 +37,11 @@ public class Ch4 {
         System.out.println("allMatch " + getStringStream().allMatch(s -> s.startsWith("m")));
 
         getStringStream().forEach(System.out::print);
+        System.out.println();
+
+        System.out.println("reduce " + getStringStream().reduce("", (s, s2) -> s + " " + s2));
+        System.out.println("reduce " + getStringStream().reduce("", String::concat));
+
     }
 
     private static Stream<String> getStringStream() {
