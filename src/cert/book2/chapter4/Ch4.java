@@ -1,9 +1,6 @@
 package cert.book2.chapter4;
 
-import java.util.Comparator;
-import java.util.IntSummaryStatistics;
-import java.util.LinkedList;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -19,6 +16,7 @@ public class Ch4 {
         objectStreamsDemo();
         primitiveStreamsDemo();
         summarizingStatisticDemo();
+        optionalStreamDemo();
 
         /*
         * List.of(1, 2, 3)
@@ -26,6 +24,15 @@ public class Ch4 {
   .peek(System.out::println)
   .count();
         * */
+    }
+
+    private static void optionalStreamDemo() {
+        Optional<Integer> intOptional = Optional.of(4);
+        intOptional
+                .map(integer -> "" + integer)
+                .filter(s -> s.length() == 3)
+                .ifPresent(System.out::println);
+
     }
 
     private static void summarizingStatisticDemo() {
@@ -39,7 +46,7 @@ public class Ch4 {
     private static void primitiveStreamsDemo() {
         Stream<Integer> integerStream = getIntegerStream();
         System.out.println("sum " + integerStream.mapToInt(value -> value).sum());
-        System.out.println("avg " + integerStream.mapToInt(value -> value).average().getAsDouble());
+        System.out.println("avg " + getIntegerStream().mapToInt(value -> value).average().getAsDouble());
     }
 
     private static Stream<Integer> getIntegerStream() {
@@ -124,6 +131,27 @@ public class Ch4 {
 
         System.out.println("collect " + getStringStream()
                 .collect(Collectors.toSet()));
+
+        System.out.println("collector joining " + getStringStream().collect(Collectors.joining(", ")));
+
+        System.out.println("collector toMap" + getStringStream()
+                .collect(Collectors.toMap(String::length, s -> s, (o, o2) -> o + ", "+ o2)));
+
+        System.out.println("collector groupingBy" + getStringStream()
+                .collect(Collectors.groupingBy(String::length)));
+
+        System.out.println("collector partitioningBy" + getStringStream()
+                .collect(Collectors.partitioningBy(s -> s.length() > 6)));
+
+        System.out.println("collector partitioningBy" + getStringStream()
+                .collect(Collectors.partitioningBy(s -> s.length() > 6, Collectors.counting())));
+
+/*        Map<Integer, Optional<Character>> map = getStringStream().collect(Collectors.groupingBy(
+                t -> t.length(),
+                Collectors.mapping(o -> o.charAt(0),
+                        Collectors.minBy(Comparator.naturalOrder()))));
+        System.out.println("mapping " + map);*/
+
     }
 
     private static void sourceOperationsExamples() {

@@ -2,6 +2,7 @@ package cert;
 
 import cert.book2.chapter3.Ch3;
 import cert.book2.chapter4.Ch4;
+import cert.book2.chapter5.Ch5;
 
 public class Main {
     String str;
@@ -41,7 +42,12 @@ public class Main {
         // chapter 4 book 2
         System.out.println("Start of chapter 4 book 2");
 
-        Ch4.start();
+        /*Ch4.start();*/
+
+        // chapter 5 book 2
+        System.out.println("Start of chapter 5 book 2");
+
+        Ch5.start();
 
     }
 
