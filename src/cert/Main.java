@@ -3,6 +3,8 @@ package cert;
 import cert.book2.chapter3.Ch3;
 import cert.book2.chapter4.Ch4;
 import cert.book2.chapter5.Ch5;
+import cert.book2.chapter6.Ch6;
+import cert.book2.chapter7.Ch7;
 
 public class Main {
     String str;
@@ -47,7 +49,15 @@ public class Main {
         // chapter 5 book 2
         System.out.println("Start of chapter 5 book 2");
 
-        Ch5.start();
+       /* Ch5.start();*/
+
+        // chapter 6
+        System.out.println("Start of chapter 6 book 1");
+        /*Ch6.start();*/
+
+        // chapter 7
+        System.out.println("Start of chapter 7 book 7");
+        Ch7.start();
 
     }
 
@@ -90,13 +100,6 @@ public class Main {
         System.out.println(1d / 0d);
         System.out.println(-1d / 0d);*/
 
-        // chapter 6
-        System.out.println("Start of chapter 6 book 1");
-        /*        try {
-            Ch6.start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
 
         // bonus exam
         System.out.println("Start of bonus exam 1");
