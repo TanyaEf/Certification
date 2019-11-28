@@ -1,5 +1,6 @@
 package cert;
 
+import cert.book2.chapter10.Ch10;
 import cert.book2.chapter3.Ch3;
 import cert.book2.chapter4.Ch4;
 import cert.book2.chapter5.Ch5;
@@ -66,8 +67,12 @@ public class Main {
         /*Ch8.start();*/
 
         // chapter 9
-        System.out.println("Start of chapter 9 book 2");
-        Ch9.start();
+        /*System.out.println("Start of chapter 9 book 2");
+        Ch9.start();*/
+
+        // chapter 10
+        System.out.println("Start of chapter 10 book 2");
+        Ch10.start();
 
     }
 
