@@ -1,22 +1,33 @@
 package cert.book2.chapter10;
 
 import java.sql.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 public class Ch10 {
     public static void start() {
         /*setupDerbyDatabase();*/
         readDataBaseDemo();
+        ExecutorService service = Executors.newScheduledThreadPool(10);
 
     }
 
     private static void readDataBaseDemo() {
         String uri = "jdbc:derby:zoo;";
         try (Connection conn = DriverManager.getConnection(uri);
-             Statement statement = conn.createStatement()){
-            ResultSet selectNameFromAnimsl = statement.executeQuery("select name from animal");
+             Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)){
+            ResultSet selectNameFromAnimsl = statement.executeQuery("select * from animal");
             while (selectNameFromAnimsl.next()){
-                System.out.println(selectNameFromAnimsl.getString(1));
+                System.out.println(selectNameFromAnimsl.getInt(1) + " " + selectNameFromAnimsl.getString(3));
             }
+            selectNameFromAnimsl.beforeFirst();
+            System.out.println(selectNameFromAnimsl.previous());
+            System.out.println(selectNameFromAnimsl.previous());
+            System.out.println(selectNameFromAnimsl.absolute(-3));
+            System.out.println(selectNameFromAnimsl.getInt(1) + " " + selectNameFromAnimsl.getString(3));
 
         } catch (SQLException e) {
             e.printStackTrace();

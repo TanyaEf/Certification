@@ -13,10 +13,12 @@ public class Ch4 {
     public static void start() {
         /*optionalDemo();*/
 
-        objectStreamsDemo();
-        primitiveStreamsDemo();
-        summarizingStatisticDemo();
-        optionalStreamDemo();
+        /*objectStreamsDemo();*/
+        /*primitiveStreamsDemo();*/
+        /*summarizingStatisticDemo();*/
+        /*optionalStreamDemo();*/
+
+       /* infStreamDemo();*/
 
         /*
         * List.of(1, 2, 3)
@@ -24,6 +26,24 @@ public class Ch4 {
   .peek(System.out::println)
   .count();
         * */
+
+        /*IntStream is = IntStream.empty();
+        is.average();
+        is.findAny();
+        is.sum();*/
+
+/*        System.out.println(Stream
+                .iterate(1, integer -> ++integer)
+                .limit(5)
+                .map(integer -> "" + integer)
+                .collect(Collectors.joining()));*/
+
+        /*Stream.generate(() -> "1").filter(s -> s.length()<=1).limit(10).forEach(System.out::println);*/
+    }
+
+    private static void infStreamDemo() {
+        Stream<String> stream = Stream.iterate("", s -> s + "1");
+        System.out.println(stream.map(s -> s + "2").limit(2).collect(Collectors.toList()));
     }
 
     private static void optionalStreamDemo() {

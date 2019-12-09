@@ -4,10 +4,25 @@ import cert.book1.chapter5.Mammal;
 import cert.book1.chapter5.Parent;
 
 public class Ch1 {
+    static class Chipmunk{}
+
     public static void start() {
 
         /*virtualMethodInvocationDemo();*/
-        innerClassesDemo();
+        /*innerClassesDemo();*/
+        /*instanceOfDemo();*/
+        genericClassDemo();
+    }
+
+    private static void genericClassDemo() {
+        System.out.println(new Hello<String>("Hi"));
+        System.out.println(new Hello("Hi"));
+    }
+
+    private static void instanceOfDemo() {
+        Chipmunk chipmunk = new Chipmunk();
+        Runnable runnable = new Thread();
+        if (runnable instanceof Chipmunk) System.out.println(true);
     }
 
     private static void innerClassesDemo() {

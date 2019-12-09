@@ -1,6 +1,9 @@
 package cert.book2.chapter5;
 
+import java.time.Duration;
+import java.time.Period;
 import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
@@ -9,8 +12,29 @@ public class Ch5 {
     public static void start() {
         /*teZoneIdExample();*/
         /*recourseBundleExample();*/
-        recourseBundleEnheritanceExample();
-        propertyExample();
+        /*recourseBundleEnheritanceExample();*/
+        /*propertyExample();*/
+
+        /*propertiesHierarchyDemo();*/
+        chronoUnitsDemo();
+    }
+
+    private static void chronoUnitsDemo() {
+        System.out.println(Duration.of(1, ChronoUnit.MINUTES));
+        System.out.println(Duration.ofMinutes(1));
+        System.out.println(Duration.of(60, ChronoUnit.SECONDS ));
+
+        System.out.println(Duration.ofDays(1));
+        System.out.println(Period.ofDays(1));
+    }
+
+    private static void propertiesHierarchyDemo() {
+        Locale locale = new Locale("fr");
+        Locale.setDefault(new Locale("en", "US"));
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("Dolphins", locale);
+        System.out.println(Locale.getDefault().toString());
+        System.out.println(resourceBundle.getString("name"));
+        System.out.println(resourceBundle.getString("age"));
     }
 
     private static void recourseBundleEnheritanceExample() {

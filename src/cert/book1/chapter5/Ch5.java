@@ -1,6 +1,9 @@
 package cert.book1.chapter5;
 
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 public class Ch5 {
     public static void start() {
 /*        Heritor heritor = new Heritor();
@@ -15,8 +18,8 @@ public class Ch5 {
 
         /*Platus.test();*/
 
-        Bird.test();
-
+        /*Bird.test();*/
 
     }
+
 }

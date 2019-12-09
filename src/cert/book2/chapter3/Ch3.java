@@ -14,7 +14,22 @@ public class Ch3 {
         /*collectionsDemo();*/
         /*comparatorDemo();*/
         /*multiValuedComparatorDemo();*/
-        java8ApiDemo();
+        /*java8ApiDemo();*/
+        listQueueRemoveDemo();
+    }
+
+    private static void listQueueRemoveDemo() {
+        List<Integer> list = new LinkedList<>();
+        list.add(10);
+        list.add(12);
+        list.remove(1);
+        System.out.println(list);
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(10);
+        queue.add(12);
+        queue.remove(1);
+        System.out.println(queue);
     }
 
     private static void java8ApiDemo() {

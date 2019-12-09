@@ -1,5 +1,6 @@
 package cert;
 
+import cert.book2.appendixC.AppC;
 import cert.book2.chapter10.Ch10;
 import cert.book2.chapter3.Ch3;
 import cert.book2.chapter4.Ch4;
@@ -52,7 +53,7 @@ public class Main {
         // chapter 5 book 2
         System.out.println("Start of chapter 5 book 2");
 
-       /* Ch5.start();*/
+        /*Ch5.start();*/
 
         // chapter 6
         System.out.println("Start of chapter 6 book 1");
@@ -60,7 +61,7 @@ public class Main {
 
         // chapter 7
         System.out.println("Start of chapter 7 book 2");
-        /*Ch7.start();*/
+        Ch7.start();
 
         // chapter 8
         System.out.println("Start of chapter 8 book 2");
@@ -72,7 +73,11 @@ public class Main {
 
         // chapter 10
         System.out.println("Start of chapter 10 book 2");
-        Ch10.start();
+        /*Ch10.start();*/
+
+        // appendix C
+        System.out.println("Start of appendix C book 2");
+        /*AppC.start();*/
 
     }
 
